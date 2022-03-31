@@ -3,8 +3,8 @@ import {
   FETCH_USERS_REQUEST,
   FETCH_USER_SUCCESS,
   DELETE_USER,
+  FETCH_STORED_DATA,
 } from "./actionTypes";
-import axios from "axios";
 
 export const onMouseHover = (id) => {
   return {
@@ -22,7 +22,7 @@ export const fetchUsersRequest = () => {
 export const fetchUserSuccess = (userData) => {
   return {
     type: FETCH_USER_SUCCESS,
-    payload: userData,
+    payload: userData
   };
 };
 
@@ -33,14 +33,31 @@ export const deleteUser = (id) => {
   };
 };
 
+// Creating action to fetch data from Local Storage
+
+export const fetchStoredData = (storedData) => {
+  return {
+    type: FETCH_STORED_DATA,
+    payload: storedData,
+  };
+};
+
+// Used fetch api instead of axios package to fetch data from api
+
 export const fetchUsersData = (pageNumber) => {
   return (dispatch) => {
     dispatch(fetchUsersRequest());
-    axios
-      .get(`https://reqres.in/api/users?page=${pageNumber}`)
-      .then((response) => {
-        const userData = response.data.data;
-        dispatch(fetchUserSuccess(userData));
+    fetch(`https://reqres.in/api/users?page=${pageNumber}`)
+      .then((response) => response.json())
+      .then((userData) => {
+        dispatch(fetchUserSuccess(userData.data));
+
+        // Store the fetched data in local storage to reduce the fetch operations when the data is stored in Local Storage
+
+        localStorage.setItem(
+          `Page${pageNumber}-Data`,
+          JSON.stringify(userData.data)
+        );
       });
   };
 };

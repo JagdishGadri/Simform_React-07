@@ -9,7 +9,6 @@ function Card() {
   const HoveredID = useSelector((state) => state.initialId);
   const User = UserData ? UserData.find((user) => user.id === HoveredID) : [];
 
-  // console.log( HoveredID)
   if (typeof HoveredID !== "number") {
     return (
       <div className="hover-card">

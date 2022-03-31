@@ -4,7 +4,6 @@ import { Trash2, Lock } from "react-feather";
 import { useDispatch } from "react-redux";
 import {
   deleteUser,
-  fetchUsersData,
   onMouseHover,
 } from "../../../redux/actions/actions";
 
@@ -27,7 +26,7 @@ function UserItem(props) {
         <img
           className="user-img"
           src={props.userPicture}
-          alt="Profile Picture"
+          alt="Profile "
         />
         <div className="user-name-email">
           <div className="user-name">
@@ -66,5 +65,3 @@ function UserItem(props) {
 }
 
 export default UserItem;
-
-

@@ -3,6 +3,7 @@ import {
   FETCH_USERS_REQUEST,
   FETCH_USER_SUCCESS,
   DELETE_USER,
+  FETCH_STORED_DATA,
 } from "../actions/actionTypes";
 
 const initialState = {
@@ -25,6 +26,12 @@ const reducer = (state = initialState, action) => {
         loading: true,
       };
     case FETCH_USER_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        fetchedData: action.payload
+      };
+    case FETCH_STORED_DATA:
       return {
         ...state,
         loading: false,
