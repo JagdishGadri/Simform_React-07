@@ -1,0 +1,8 @@
+.user-container {
+  background-color: white;
+  width: 80%;
+  min-height: 636px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}

@@ -1,0 +1,80 @@
+.hover-card {
+  background-color: white;
+  height: 400px;
+  width: 250px;
+  border-radius: 25px;
+  margin-bottom: 100px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  right: 10%;
+  top: 10%;
+}
+
+.avatar {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+
+.click-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  margin: 20px;
+}
+
+.user-meter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: rgb(245, 175, 70);
+}
+meter {
+  width: 80%;
+}
+
+meter::-webkit-meter-bar {
+  background: rgb(255, 228, 168);
+
+  border: none;
+  width: 89%;
+  height: 5px;
+}
+
+.card-active-button {
+  background-color: rgb(238, 183, 111);
+  width: 60%;
+  height: 7%;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+.click-bar {
+  width: 2px;
+  height: 45px;
+  opacity: 0.5;
+  background-color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.no-user-text {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(179, 206, 247);
+  border-radius: 6px;
+  padding: 15px;
+  align-items: center;
+  margin: 70px 10px;
+  height: 100px;
+}

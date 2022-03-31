@@ -1,0 +1,8 @@
+.user-list {
+  background-color: white;
+}
+
+.list-title {
+  display: grid;
+  grid-template-columns: 27.3% 24.5% 25% 5%;
+}
