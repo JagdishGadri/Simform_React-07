@@ -47,7 +47,7 @@ export const fetchStoredData = (storedData) => {
 export const fetchUsersData = (pageNumber) => {
   return (dispatch) => {
     dispatch(fetchUsersRequest());
-    fetch(`https://reqres.in/api/users?page=${pageNumber}`)
+    fetch(`${process.env.REACT_APP_API}/users?page=${pageNumber}`)
       .then((response) => response.json())
       .then((userData) => {
         dispatch(fetchUserSuccess(userData.data));
