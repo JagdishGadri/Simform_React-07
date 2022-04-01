@@ -18,16 +18,16 @@ function Pagination(props) {
     <div>
       <ul className="pagination">
         <li className="page-number">
-          <a onClick={pageOneHandler}> &lt;&lt; Prev </a>
+          <div className="a" onClick={pageOneHandler}> &lt;&lt; Prev </div>
         </li>
         <li className="page-number">
-          <a onClick={pageOneHandler}>1</a>
+          <div className="a" onClick={pageOneHandler}>1</div>
         </li>
         <li className="page-number">
-          <a onClick={pageTwoHandler}>2</a>
+          <div className="a" onClick={pageTwoHandler}>2</div>
         </li>
         <li className="page-number">
-          <a onClick={pageTwoHandler}>Next &gt;&gt;</a>
+          <div className="a" onClick={pageTwoHandler}>Next &gt;&gt;</div>
         </li>
       </ul>
     </div>
